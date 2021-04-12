@@ -55,7 +55,7 @@ jobs:
           application_name: express-graphql-todo
           environment_name: Expressgraphqltodo-env
           region: ap-southeast-1
-          use_existing_version_if_available: true
+          version_label: "my-app-${{ steps.format-time.outputs.replaced }}"
           deployment_package: deploy.zip
 
       - name: Deployed!

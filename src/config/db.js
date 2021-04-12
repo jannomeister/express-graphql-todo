@@ -15,11 +15,11 @@ const config = {
   port: 5432,
 };
 
-const sequelize = new Sequelize(
-  `${config.type}://${config.user}:${config.password}@${config.host}:${config.port}/${config.name}`
-);
+// const sequelize = new Sequelize(
+//   `${config.type}://${config.user}:${config.password}@${config.host}:${config.port}/${config.name}`
+// );
 
 module.exports = {
-  db: sequelize,
+  db: null,
   DataTypes,
 };
