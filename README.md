@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Express + GraphQL</h1>
+  <h1>Express + GraphQL + Postgresql</h1>
 
   <p>express + graphql + postgresql integration for client's task</p>
 </div>
