@@ -9,7 +9,7 @@
     "yarn": ">=1"
   },
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node server.js",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "keywords": [],

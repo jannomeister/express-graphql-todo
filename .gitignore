@@ -1,6 +1,7 @@
 # compiled output
 /dist
 /node_modules
+.elasticbeanstalk/
 
 # Logs
 logs
@@ -35,3 +36,7 @@ lerna-debug.log*
 
 #environment variable
 .env
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

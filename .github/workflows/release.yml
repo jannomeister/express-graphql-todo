@@ -3,7 +3,7 @@ name: express-graphql-todo
 on:
   push:
     branches:
-      - main
+      - xxx
 
 jobs:
   build:
