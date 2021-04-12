@@ -4,7 +4,7 @@
   "description": "express + graphql + postgresql integration for client's task",
   "main": "src/server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node src/server.js",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "keywords": [],

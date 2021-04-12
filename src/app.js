@@ -69,4 +69,8 @@ app.use(
   })
 );
 
+app.get("/", (req, res) => {
+  res.redirect("/graphql");
+});
+
 module.exports = app;
