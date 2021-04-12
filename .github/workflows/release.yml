@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  release:
     strategy:
       matrix:
         node: [12]
@@ -30,6 +30,9 @@ jobs:
 
       - name: Installing NPM
         run: npm install
+
+      - name: ▶️ Run test script
+        run: npm run test
 
       - name: Generate deployment package
         run: zip -r deploy.zip * -x "**node_modules**"

@@ -4,6 +4,7 @@ const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
 const { GraphQLDateTime } = require("graphql-iso-date");
 const { v4: uuid } = require("uuid");
+const { incrementDay } = require("./config/utils");
 
 // repo
 const { Log } = require("./repositories");
@@ -41,10 +42,7 @@ const root = {
     }
   },
   log: async ({ input }) => {
-    const output = new Date(input);
-
-    // to get the next day's date
-    output.setDate(output.getDate() + 1);
+    const output = incrementDay(input);
 
     try {
       await Log.create({

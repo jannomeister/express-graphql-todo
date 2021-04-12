@@ -1,0 +1,6 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "./src",
+  "testEnvironment": "node",
+  "testRegex": ".spec.js$"
+}
