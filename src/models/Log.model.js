@@ -23,4 +23,4 @@ const Log = db.define(
   { createdAt: false, updatedAt: false, freezeTableName: true }
 );
 
-module.exports = null;
+module.exports = Log;
