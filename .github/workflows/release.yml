@@ -55,7 +55,7 @@ jobs:
           application_name: express-graphql-todo
           environment_name: Expressgraphqltodo-env
           region: ap-southeast-1
-          version_label: Sample Application
+          use_existing_version_if_available: true
           deployment_package: deploy.zip
 
       - name: Deployed!
