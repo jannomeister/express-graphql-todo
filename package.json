@@ -3,11 +3,6 @@
   "version": "1.0.0",
   "description": "express + graphql + postgresql integration for client's task",
   "main": "src/server.js",
-  "engines": {
-    "node": ">=10.18",
-    "npm": ">=6",
-    "yarn": ">=1"
-  },
   "scripts": {
     "start": "node server.js",
     "test:e2e": "jest --config ./test/jest-e2e.json"
