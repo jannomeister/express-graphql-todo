@@ -55,6 +55,7 @@ const root = {
 
       return output;
     } catch (err) {
+      console.log("errrx: ", err);
       return output;
     }
   },
