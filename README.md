@@ -36,4 +36,4 @@ You can now run the app, just type the command `npm run start` and you're good t
 
 #### Running tests
 
-PS: Currently, the app don't have unit tests but it does have e2e tests just run `npm run test:e2e`
+Run the unit tests using this command `npm run test` and e2e test with `npm run test:e2e`
