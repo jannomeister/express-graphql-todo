@@ -1,10 +1,12 @@
 require("dotenv").config();
+
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const { buildSchema } = require("graphql");
 const { GraphQLDateTime } = require("graphql-iso-date");
 const { v4: uuid } = require("uuid");
 const { incrementDay } = require("./config/utils");
+const { isValid, parseISO } = require("date-fns");
 
 // repo
 const { Log } = require("./repositories");
@@ -26,8 +28,13 @@ const GraphQLSchema = buildSchema(`
     logs: [Log!]!
   },
 
+  type CreateLogResponse {
+    output: Date,
+    error: String
+  }
+
   type Mutation {
-    log(input: String!): Date!
+    log(input: String!): CreateLogResponse!
   }
 `);
 
@@ -42,6 +49,12 @@ const root = {
     }
   },
   log: async ({ input }) => {
+    if (!isValid(parseISO(input))) {
+      return {
+        error: "Please provide a valid date",
+      };
+    }
+
     const output = incrementDay(input);
 
     try {
@@ -51,9 +64,9 @@ const root = {
         output: output.toISOString(),
       });
 
-      return output;
+      return { output };
     } catch (err) {
-      return output;
+      return { output };
     }
   },
 };
